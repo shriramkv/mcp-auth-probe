@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-auth-probe"
+version = "0.1.0"
+description = "Check the OAuth authorization setup of a remote MCP server against the MCP authorization spec"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Shriram K Vasudevan" }]
+requires-python = ">=3.9"
+keywords = ["mcp", "model-context-protocol", "oauth", "security", "aaif", "ci"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://github.com/shriramkv/mcp-auth-probe"
+
+[project.scripts]
+mcp-auth-probe = "mcp_auth_probe.cli:main"
+
+[tool.setuptools]
+packages = ["mcp_auth_probe"]
